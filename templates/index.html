@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="https://cdn.bootcss.com/bulma/0.7.1/css/bulma.css" rel="stylesheet">
+  <title>URL 短网址服务</title>
+  <style>
+    .main {
+      max-width: 640px;
+      margin: 0 auto;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="section">
+    <div class="container">
+      <div class="main">
+
+          <h1 class="title is-1">URL 短网址服务</h1>
+          <form action="/short/" method="post">
+          <div class="field is-grouped">
+              <p class="control is-expanded">
+                <input class="input" type="text" name="long" placeholder="请输入一个网址">
+              </p>
+              <p class="control">
+                  <input type="submit" class="button is-info" value="缩短它" >
+              </p>
+            </div></form>
+            <div class="help">
+                说明：短网址服务，将一个较长的URL转换成更短的网址，访问较短的网址会跳转到原始的较长网址
+            </div>
+      </div>
+    </div>
+  </div>
+  <center><p>短网址为：<a href="http://{{ short }}">{{ short }}</a></p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</center>
+</body>
+</html>
